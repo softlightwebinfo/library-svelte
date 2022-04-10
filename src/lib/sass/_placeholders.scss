@@ -1,0 +1,47 @@
+%Card {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid #f6f6f6;
+    border-radius: 0.25rem;
+    -webkit-box-shadow: 0 0.75rem 1.5rem rgb(18 38 63 / 3%);
+    box-shadow: 0 0.75rem 1.5rem rgb(18 38 63 / 3%);
+}
+
+%CardBig {
+    box-shadow: var(--bs-big-shadow);
+    -webkit-box-shadow: var(--bs-big-shadow);
+    -moz-box-shadow: var(--bs-big-shadow);
+    -o-box-shadow: var(--bs-big-shadow);
+}
+
+%Input {
+    display: block;
+    width: 100%;
+    padding: 0.47rem 0.75rem;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+        -webkit-box-shadow 0.15s ease-in-out;
+}

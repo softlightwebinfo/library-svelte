@@ -1,0 +1,103 @@
+@for $i from 0 to 15 {
+    .mt-#{$i} {
+        margin-top: #{$i*5}px;
+    }
+
+    .mb-#{$i} {
+        margin-bottom: #{$i*5}px;
+    }
+
+    .ml-#{$i} {
+        margin-left: #{$i*5}px;
+    }
+
+    .mr-#{$i} {
+        margin-right: #{$i*5}px;
+    }
+
+    .pt-#{$i} {
+        padding-top: #{$i*5}px;
+    }
+
+    .pb-#{$i} {
+        padding-bottom: #{$i*5}px;
+    }
+
+    .pl-#{$i} {
+        padding-left: #{$i*5}px;
+    }
+
+    .pr-#{$i} {
+        padding-right: #{$i*5}px;
+    }
+
+    .m-#{$i} {
+        margin: #{$i*5}px;
+    }
+
+    .p-#{$i} {
+        padding: #{$i*5}px;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.flex {
+    display: flex;
+
+    &-column {
+        flex-direction: column;
+    }
+
+    &-row {
+        flex-direction: row;
+    }
+}
+
+.m-auto {
+    margin: auto;
+}
+
+.mt-auto {
+    margin-top: auto;
+}
+
+.mb-aut0 {
+    margin-bottom: auto;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.mr-auto {
+    margin-right: auto;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+.center {
+    @extend .flex;
+    @extend .flex-justify-center;
+    @extend .flex-align-center;
+}
