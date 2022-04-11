@@ -23,29 +23,6 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@codeunic/library-svelte@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.npmjs.org/@codeunic/library-svelte/-/library-svelte-0.6.0.tgz#b291c64f631c7dc38da7b2fbfb12a9fee6d44a91"
-  integrity sha512-kP6A9sTsrXpVZoG6nBkLn8NONYj368ozjQ02jHxgbF3rMmju9CVA+EOzT/sHdzdVVYiAHudWZhI7f4CWKUlPcA==
-  dependencies:
-    "@fortawesome/free-solid-svg-icons" "^6.0.0"
-    animate.css "^4.1.1"
-    fa-svelte "^3.1.0"
-    sass "^1.49.8"
-    svelte2tsx "^0.5.5"
-
-"@codeunic/library-svelte@^0.7.1":
-  version "0.7.1"
-  resolved "https://registry.npmjs.org/@codeunic/library-svelte/-/library-svelte-0.7.1.tgz#90bf82b288d5504396d159b62f8e1a5f960fb6eb"
-  integrity sha512-k9o/3Mj1gww5Lj4PQpS3B0h2lu0+SpfMJ4w1AzFIOLMAeFT7wL8ojKLgueKqUF9rZ1Dw6i2FD3LRSvf9f8SNOQ==
-  dependencies:
-    "@codeunic/library-svelte" "^0.6.0"
-    "@fortawesome/free-solid-svg-icons" "^6.0.0"
-    animate.css "^4.1.1"
-    fa-svelte "^3.1.0"
-    sass "^1.49.8"
-    svelte2tsx "^0.5.5"
-
 "@eslint/eslintrc@^0.4.3":
   version "0.4.3"
   resolved "https://registry.npmjs.org/@eslint/eslintrc/-/eslintrc-0.4.3.tgz"

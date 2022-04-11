@@ -1,5 +1,5 @@
 <script>
-  import Accordion from '$lib/components/accordion.svelte';
+  import Accordion from '$lib/components/Accordion.svelte';
 
   const data = {
     'foo': [1, 2, 3],

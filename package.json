@@ -1,6 +1,6 @@
 {
   "name": "@codeunic/library-svelte",
-  "version": "0.11.0",
+  "version": "0.11.4",
   "scripts": {
     "dev": "svelte-kit dev --port 3002",
     "build": "svelte-kit build",
@@ -29,7 +29,6 @@
   },
   "type": "module",
   "dependencies": {
-    "@codeunic/library-svelte": "^0.7.1",
     "@fortawesome/free-solid-svg-icons": "^6.0.0",
     "animate.css": "^4.1.1",
     "fa-svelte": "^3.1.0",
