@@ -3,7 +3,7 @@
 	export let icon = null;
 </script>
 
-<a {href} class="DropdownItem">
+<a {href} class="DropdownItem" on:click>
 	{#if icon}
 		<i class={icon} />
 	{/if}
