@@ -23,6 +23,7 @@
 	import type { IPriceRow } from '$lib/interfaces/IPriceRow';
 	import Closeable from '$lib/components/Closeable.svelte';
 	import type { IScheduleRow } from '$lib/interfaces/IScheduleRow';
+	import NewActions from '$lib/components/NewActions.svelte';
 
 	export let transTitle = 'Create event';
 	export let transTitleBottom = "Nice Job! You're almost done";
@@ -60,6 +61,13 @@
 	let selectedPaid = 1;
 	let prices: IPriceRow[] = [{ name: 'Normal', price: '8', isDefault: true }];
 	let schedules: IScheduleRow[] = [];
+	let itemsSchedule = [
+		{ title: '', startDate: '', startTime: '', endDate: '', endTime: '' },
+		{ title: '', startDate: '', startTime: '', endDate: '', endTime: '' },
+		{ title: '', startDate: '', startTime: '', endDate: '', endTime: '' },
+		{ title: '', startDate: '', startTime: '', endDate: '', endTime: '' },
+		{ title: '', startDate: '', startTime: '', endDate: '', endTime: '' }
+	];
 
 	const buttons = ['Free Ticket', 'Paid Ticket', 'Donation Ticket'];
 	const onDeletePrice = (index: number) => () => (prices = prices.filter((_, ind) => index != ind));
@@ -70,6 +78,7 @@
 			isDefault: itIndex == index
 		}));
 	};
+	const templateAdd = { title: '', startDate: '', startTime: '', endDate: '', endTime: '' };
 </script>
 
 <NavbarToolbar rounded card>
@@ -206,11 +215,48 @@
 		</Card>
 		<Card shadow class="mt-4">
 			<CardHeader>{textTitleSchedule}</CardHeader>
-			<CardBody />
+			<CardBody>
+				<NewActions let:onDelete let:onAdd items={itemsSchedule}>
+					<Button on:click={onAdd(templateAdd)} slot="add" shadow icon="fa fa-plus">New Item</Button
+					>
+					<Card>
+						<Button icon="fa fa-trash" class="btn-delete" on:click={onDelete} />
+						<CardBody>
+							<FormGroup label="Title">
+								<Input placeholder="title..." />
+							</FormGroup>
+							<Row>
+								<Col>
+									<FormGroup label="Start Date">
+										<Input placeholder="start date..." type="date" />
+									</FormGroup>
+								</Col>
+								<Col>
+									<FormGroup label="Start Time">
+										<Input placeholder="title..." type="time" />
+									</FormGroup>
+								</Col>
+							</Row>
+							<Row>
+								<Col>
+									<FormGroup label="End Date">
+										<Input placeholder="End Date..." type="date" />
+									</FormGroup>
+								</Col>
+								<Col>
+									<FormGroup label="End Time">
+										<Input placeholder="End Time..." type="time" />
+									</FormGroup>
+								</Col>
+							</Row>
+						</CardBody>
+					</Card>
+				</NewActions>
+			</CardBody>
 		</Card>
 	</Col>
 	<Col sm={12} class="mb-4" md="4">
-		<Card shadow>
+		<Card shadow class="card-stick">
 			<CardHeader>Other info</CardHeader>
 			<CardBody>
 				<FormGroup label={textOrganizer}>
@@ -252,3 +298,14 @@
 		</slot>
 	</Toolbar>
 </NavbarToolbar>
+
+<style lang="scss">
+	:global(.card-stick) {
+		position: sticky !important;
+		top: 20px;
+	}
+	:global(.btn-delete) {
+		position: absolute;
+		right: 0;
+	}
+</style>

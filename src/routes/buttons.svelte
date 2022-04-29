@@ -45,4 +45,8 @@
 		<Button icon="fa fa-check" rounded light>Light button</Button>
 		<Button icon="fa fa-check" rounded dark>Dark button</Button>
 	</Container>
+	<Container class="mt-10">
+		<Button icon="fa fa-check" rounded>Create account</Button>
+		<Button loading icon="fa fa-check" rounded primary>Loading button</Button>
+	</Container>
 </div>

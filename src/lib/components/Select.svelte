@@ -9,7 +9,8 @@
 	export let multiple: boolean = false;
 	export let rows: ISelect[] = [];
 	export let placeholder = 'Select';
-	let selected: ISelect[] | Map<any, ISelect> | any;
+	export let selected: ISelect[] | Map<any, ISelect> | any;
+	
 	$: _rows = getRows(rows, selected);
 
 	const getRows = (rows, selected) => {

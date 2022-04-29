@@ -18,12 +18,14 @@
 	export let light: boolean = false;
 	export let dark: boolean = false;
 	export let shadow: boolean = false;
+	export let loading: boolean = false;
+	export let textLoading: string = 'Loading';
 </script>
 
 <button
 	on:click
 	{type}
-	class="Button {$$props.class} {size}"
+	class="Button {$$props.class ?? ''} {size}"
 	class:default={isDefault}
 	style={$$props.style}
 	class:disabled
@@ -31,7 +33,6 @@
 	class:primary
 	class:block
 	class:light
-	{disabled}
 	class:secondary
 	class:success
 	class:warning
@@ -40,11 +41,18 @@
 	class:dark
 	class:rounded
 	class:shadow
+	class:loading
+	disabled={loading || disabled}
 >
-	{#if icon}
-		<i class={icon} />
+	{#if !loading}
+		{#if icon}
+			<i class={icon} />
+		{/if}
+		<slot />
+	{:else}
+		<i class="fa fa-spin fa-spinner" />
+		{textLoading}
 	{/if}
-	<slot />
 </button>
 
 <style lang="scss">
@@ -132,14 +140,6 @@
 	.block {
 		width: 100%;
 	}
-	.disabled {
-		background-color: gainsboro;
-		opacity: 0.4;
-
-		&:hover {
-			cursor: no-drop;
-		}
-	}
 	.rounded {
 		border-radius: 50px;
 	}
@@ -212,5 +212,16 @@
 	.shadow {
 		box-shadow: var(--bs-button-shadow);
 		border: 1px solid rgb(240, 248, 255);
+	}
+	.disabled,
+	.loading {
+		background-color: gainsboro;
+		opacity: 0.4;
+		color: black;
+		border: 0;
+
+		&:hover {
+			cursor: no-drop;
+		}
 	}
 </style>
