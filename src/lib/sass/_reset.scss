@@ -31,8 +31,9 @@ ul {
 }
 
 a {
-  color: var(--secondary);
   text-decoration: none;
+  color: #2c7be5;
+  font-size: .8333333333rem;
 
   &:hover {
     color: lightblue;

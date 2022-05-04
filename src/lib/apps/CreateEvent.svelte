@@ -24,6 +24,8 @@
 	import Closeable from '$lib/components/Closeable.svelte';
 	import type { IScheduleRow } from '$lib/interfaces/IScheduleRow';
 	import NewActions from '$lib/components/NewActions.svelte';
+	import Upload from '$lib/components/Upload.svelte';
+	import CustomFields from '$lib/components/CustomFields.svelte';
 
 	export let transTitle = 'Create event';
 	export let transTitleBottom = "Nice Job! You're almost done";
@@ -51,6 +53,8 @@
 	export let textTitleDetails = 'Event Details';
 	export let textTitlePrice = 'Ticket Price';
 	export let textTitleSchedule = 'Schedule';
+	export let textTitleUploadPhoto = 'Upload Photo';
+	export let textCustomFields = 'Custom Fields';
 
 	export let organizer: ISelect[] = [];
 	export let sponsors: ISelect[] = [];
@@ -79,6 +83,8 @@
 		}));
 	};
 	const templateAdd = { title: '', startDate: '', startTime: '', endDate: '', endTime: '' };
+	
+	let fields;
 </script>
 
 <NavbarToolbar rounded card>
@@ -252,6 +258,18 @@
 						</CardBody>
 					</Card>
 				</NewActions>
+			</CardBody>
+		</Card>
+		<Card shadow class="mt-4">
+			<CardHeader>{textTitleUploadPhoto}</CardHeader>
+			<CardBody>
+				<Upload />
+			</CardBody>
+		</Card>
+		<Card shadow class="mt-4">
+			<CardHeader>{textCustomFields}</CardHeader>
+			<CardBody>
+				<CustomFields bind:fields />
 			</CardBody>
 		</Card>
 	</Col>

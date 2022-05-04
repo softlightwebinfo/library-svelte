@@ -22,6 +22,7 @@
 		@extend %CardBig;
 		align-items: baseline;
 		flex-direction: row;
+		align-items: center;
 	}
 	.rounded {
 		border-radius: 12px;

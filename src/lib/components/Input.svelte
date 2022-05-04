@@ -9,6 +9,7 @@
 	export let name = '';
 	export let label = '';
 	export let ref = null;
+	export let rounded: boolean = false;
 	export let isDefault = true;
 	function typeAction(node) {
 		node.type = type;
@@ -42,6 +43,7 @@
 		bind:value
 		class="Input"
 		class:disabled
+		class:rounded
 		bind:this={ref}
 	/>
 </label>
@@ -99,5 +101,8 @@
 			transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
 				-webkit-box-shadow 0.15s ease-in-out;
 		}
+	}
+	.rounded {
+		border-radius: 80px !important;
 	}
 </style>

@@ -87,6 +87,7 @@
 	}
 	i {
 		margin-right: 2px;
+		color: inherit;
 	}
 	.default {
 		display: inline-block;

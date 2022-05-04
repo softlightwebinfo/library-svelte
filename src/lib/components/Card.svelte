@@ -1,4 +1,5 @@
 <script>
+	import CardHeader from './CardHeader.svelte';
 	export let column = false;
 	export let rounded = false;
 	export let shadow = false;
@@ -18,7 +19,15 @@
 		flex-direction: row;
 	}
 	.rounded {
-		border-radius: 15px;
+		border-radius: 20px;
+		:global(.CardHeader) {
+			border-top-left-radius: 20px;
+			border-top-right-radius: 20px;
+		}
+		:global(.CardFooter) {
+			border-bottom-left-radius: 20px;
+			border-bottom-right-radius: 20px;
+		}
 	}
 	.shadow {
 		@extend %CardBig;

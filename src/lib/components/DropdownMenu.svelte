@@ -24,5 +24,7 @@
 		box-shadow: 0 1rem 3rem rgb(0 0 0 / 18%);
 		z-index: 1000;
 		right: 0;
+		max-height: 300px;
+		overflow: auto;
 	}
 </style>

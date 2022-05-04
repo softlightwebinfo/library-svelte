@@ -1,4 +1,5 @@
 <script lang="ts">
+	export let simpleHeight = false;
 	export let value = '';
 	export let disabled: boolean = false;
 	export let readonly: boolean = false;
@@ -9,6 +10,7 @@
 	export let label = '';
 	export let ref = null;
 	export let isDefault = true;
+	export let transparent = false;
 </script>
 
 <label>
@@ -32,6 +34,8 @@
 		bind:value
 		class:default={isDefault}
 		class:disabled
+		class:transparent
+		class:simpleHeight
 		bind:this={ref}
 	/>
 </label>
@@ -84,5 +88,12 @@
 		transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 		transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
 			-webkit-box-shadow 0.15s ease-in-out;
+	}
+	.transparent {
+		border: 0;
+		padding: 0;
+	}
+	.simpleHeight {
+		min-height: 100px;
 	}
 </style>

@@ -6,18 +6,28 @@
 	export let image: string = '';
 	export let title: string = 'Default file input example';
 	export let shadow: boolean = false;
+	export let isDefault: boolean = false;
+	export let noBorderBottom: boolean = false;
 </script>
 
-<Card class="CoverImage {$$props.class ?? ''}" rounded {shadow}>
+<Card
+	class="CoverImage {$$props.class ?? ''} {noBorderBottom ? 'noBorderBottom' : ''}"
+	rounded
+	{shadow}
+>
 	<img src={image} {alt} title={alt} />
 
-	<!-- svelte-ignore a11y-label-has-associated-control -->
-	<label>
-		<slot>
-			<span><i class={icon} />{title}</span>
-			<input type="file" />
-		</slot>
-	</label>
+	{#if !isDefault}
+		<!-- svelte-ignore a11y-label-has-associated-control -->
+		<label>
+			<slot>
+				<span><i class={icon} />{title}</span>
+				<input type="file" />
+			</slot>
+		</label>
+	{:else}
+		<slot />
+	{/if}
 </Card>
 
 <style lang="scss">
@@ -25,7 +35,10 @@
 		overflow: hidden;
 		height: 500px;
 	}
-
+	:global(.CoverImage.noBorderBottom) {
+		border-bottom-left-radius: 0 !important;
+		border-bottom-right-radius: 0 !important;
+	}
 	input {
 		display: none;
 	}
