@@ -50,6 +50,9 @@
 		cursor: pointer;
 		padding: 4rem;
 		text-align: center;
+		width: 100%;
+		position: relative;
+		display: block;
 		&:hover {
 			cursor: pointer;
 		}
