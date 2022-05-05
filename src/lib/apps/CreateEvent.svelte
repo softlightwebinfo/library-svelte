@@ -263,7 +263,7 @@
 		<Card shadow class="mt-4">
 			<CardHeader>{textTitleUploadPhoto}</CardHeader>
 			<CardBody>
-				<Upload />
+				<Upload on:change={e=>console.log(e.detail)} />
 			</CardBody>
 		</Card>
 		<Card shadow class="mt-4">

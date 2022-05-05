@@ -5,25 +5,25 @@
 	export let accept: string = 'image/*';
 	export let multiple: boolean = true;
 	export let title: string = 'Drop your images here';
-	export let files;
+	export let files = null;
 
 	const onChange = (event) => {
-		const file = event.files?.[0];
+		const filesData = event.target.files;
 
-		if (file) {
+		if (filesData?.[0]) {
 			const reader = new FileReader();
 			reader.addEventListener('load', function () {
-				dispatch('change', { event, files, preview: reader.result });
+				dispatch('change', { event, files: filesData, preview: reader.result });
 			});
 
-			reader.readAsDataURL(file);
+			reader.readAsDataURL(filesData[0]);
 
 			return;
 		}
 	};
 </script>
 
-<div tabindex="0" class="Upload {$$props.class ?? ''}">
+<label tabindex="0" class="Upload {$$props.class ?? ''}">
 	<input
 		bind:files
 		on:change={onChange}
@@ -40,7 +40,7 @@
 			<p>{title}</p>
 		</slot>
 	</div>
-</div>
+</label>
 
 <style lang="scss">
 	.Upload {
