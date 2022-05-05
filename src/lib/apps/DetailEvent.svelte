@@ -6,7 +6,7 @@
 	import CatTitle from '$lib/components/CatTitle.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import ButtonToolbar from '$lib/components/ButtonToolbar.svelte';
-	import TitleSubTitleGroup from '$lib/components/TitleSubTitleGroup.svelte';
+	import TitleSubTitleGroup from '$lib/components/TitleSubtTitleGroup.svelte';
 	import Row from '$lib/components/Row.svelte';
 	import Col from '$lib/components/Col.svelte';
 	import CardBody from '$lib/components/CardBody.svelte';
