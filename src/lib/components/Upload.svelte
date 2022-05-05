@@ -5,10 +5,21 @@
 	export let accept: string = 'image/*';
 	export let multiple: boolean = true;
 	export let title: string = 'Drop your images here';
-	let files;
-    
+	export let files;
+
 	const onChange = (event) => {
-		dispatch('change', { event, files });
+		const file = event.files?.[0];
+
+		if (file) {
+			const reader = new FileReader();
+			reader.addEventListener('load', function () {
+				dispatch('change', { event, files, preview: reader.result });
+			});
+
+			reader.readAsDataURL(file);
+
+			return;
+		}
 	};
 </script>
 
