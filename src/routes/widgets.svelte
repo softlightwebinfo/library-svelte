@@ -1,4 +1,5 @@
 <script lang="ts">
+	import CardGrid from '$lib/components/CardGrid.svelte';
 	import CardHolder from '$lib/components/CardHolder.svelte';
 	import Col from '$lib/components/Col.svelte';
 	import Dot from '$lib/components/Dot.svelte';
@@ -31,6 +32,18 @@
 		</Col>
 	</Row>
 </div>
+
+<CardGrid style="max-width: 1000px; margin:auto;margin-top:40px;">
+	<CardHolder title="Customers" data="58.39K" buttonText="See all" buttonUrl="/" theme="info" />
+	<CardHolder title="Customers" data="58.39K" buttonText="See all" buttonUrl="/" theme="info" />
+	<CardHolder title="Customers" data="58.39K" buttonText="See all" buttonUrl="/" theme="info" />
+	<CardHolder title="Customers" data="58.39K" buttonText="See all" buttonUrl="/" theme="info" />
+	<CardHolder title="Customers" data="58.39K" buttonText="See all" buttonUrl="/" theme="info" />
+	<CardHolder title="Customers" data="58.39K" buttonText="See all" buttonUrl="/" theme="info" />
+	<CardHolder title="Customers" data="58.39K" buttonText="See all" buttonUrl="/" theme="info" />
+	<CardHolder title="Customers" data="58.39K" buttonText="See all" buttonUrl="/" theme="info" />
+	<CardHolder title="Customers" data="58.39K" buttonText="See all" buttonUrl="/" theme="info" />
+</CardGrid>
 
 <style lang="scss" global>
 	@import '../lib/style.scss';
