@@ -1,10 +1,17 @@
-<div class="CardGrid {$$props.class ?? ''}" style={$$props.style ?? ''}>
+<script lang="ts">
+	import Card from './Card.svelte';
+
+	export let shadow = false;
+	export let bordered = false;
+</script>
+
+<Card {shadow} {bordered} class="CardGrid {$$props.class ?? ''}" style={$$props.style ?? ''}>
 	<slot />
-</div>
+</Card>
 
 <style lang="scss">
 	@import '../sass/_placeholders.scss';
-	.CardGrid {
+	:global(.CardGrid) {
 		display: flex;
 		flex-wrap: wrap;
 		:global(> *) {
