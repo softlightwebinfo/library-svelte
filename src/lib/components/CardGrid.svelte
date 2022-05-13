@@ -14,12 +14,13 @@
 	:global(.CardGrid) {
 		display: flex;
 		flex-wrap: wrap;
+		flex-direction: row !important;
 		:global(> *) {
 			flex: 1 1 300px;
 			border: 0;
-			border-radius: 0;
-			box-shadow: none;
-			border: 1px solid whitesmoke;
+			border-radius: 0 !important;
+			box-shadow: none !important;
+			border: 1px solid whitesmoke !important;
 		}
 	}
 </style>

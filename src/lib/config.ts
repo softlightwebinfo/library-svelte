@@ -12,3 +12,8 @@ export const typeSelects = {
     11: "select",
     12: "file",
 }
+export const Constants = {
+    PAGE_LIMIT: 30,
+    LEFT_PAGE: "LEFT",
+    RIGHT_PAGE: "RIGHT"
+}

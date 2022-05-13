@@ -33,7 +33,7 @@
 	</Row>
 </div>
 
-<CardGrid style="max-width: 1000px; margin:auto;margin-top:40px;">
+<CardGrid shadow style="max-width: 1200px; margin:auto;margin-top:40px;">
 	<CardHolder title="Customers" data="58.39K" buttonText="See all" buttonUrl="/" theme="info" />
 	<CardHolder title="Customers" data="58.39K" buttonText="See all" buttonUrl="/" theme="info" />
 	<CardHolder title="Customers" data="58.39K" buttonText="See all" buttonUrl="/" theme="info" />

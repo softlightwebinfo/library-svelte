@@ -1,5 +1,5 @@
 <script>
-	export let group = 'default';
+	export let group = [];
 	export let value = 1;
 	export let checked = false;
 	export let label = null;
@@ -27,7 +27,7 @@
 	}
 </script>
 
-<label class:block>
+<label class:block disabled>
 	<input type="checkbox" bind:checked {value} />
 	{#if label}
 		<span>{label}</span>

@@ -5,10 +5,11 @@
 	export let value;
 	export let label = null;
 	export let checked: boolean = false;
+	export let group = null;
 </script>
 
-<label>
-	<input type="radio" {name} on:change bind:value {checked} />
+<label class={$$props.class ?? ''}>
+	<input type="radio" bind:group {name} on:change bind:value {checked} />
 	{#if label}
 		{label}
 	{/if}
@@ -19,6 +20,7 @@
 
 <style lang="scss">
 	label {
+		display: inline-block;
 		cursor: pointer;
 		:global(.SubTitleHeading) {
 			font-size: 0.8em;

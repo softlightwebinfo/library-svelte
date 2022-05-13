@@ -1,8 +1,9 @@
 <script lang="ts">
 	export let alignCenter: boolean = false;
+	export let noWrap: boolean = false;
 </script>
 
-<div class="Group {$$props.class ?? ''}" class:alignCenter>
+<div class="Group {$$props.class ?? ''}" class:alignCenter class:noWrap>
 	<div><slot name="left" /></div>
 	<div class="Group__right"><slot /></div>
 </div>
@@ -18,5 +19,8 @@
 	}
 	.alignCenter {
 		align-items: center;
+	}
+	.noWrap {
+		flex-wrap: nowrap;
 	}
 </style>

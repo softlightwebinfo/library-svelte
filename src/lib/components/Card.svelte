@@ -1,11 +1,18 @@
-<script>
-	import CardHeader from './CardHeader.svelte';
+<script lang="ts">
 	export let column = false;
 	export let rounded = false;
 	export let shadow = false;
+	export let border = false;
 </script>
 
-<div class="Card {$$props.class ?? ''}" class:column class:rounded class:shadow>
+<div
+	class="Card {$$props.class ?? ''}"
+	style={$$props.style ?? ' '}
+	class:column
+	class:rounded
+	class:shadow
+	class:border
+>
 	<slot />
 </div>
 
@@ -31,5 +38,8 @@
 	}
 	.shadow {
 		@extend %CardBig;
+	}
+	.border {
+		border: 1px solid gainsboro;
 	}
 </style>
