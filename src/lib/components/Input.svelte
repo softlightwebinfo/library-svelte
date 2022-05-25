@@ -8,6 +8,7 @@
 	export let required = false;
 	export let name = '';
 	export let label = '';
+	export let list = null;
 	export let ref = null;
 	export let rounded: boolean = false;
 	export let isDefault = true;
@@ -33,6 +34,7 @@
 		on:change
 		on:input
 		on:focus
+		{list}
 		{autofocus}
 		{disabled}
 		{name}
