@@ -1,4 +1,8 @@
-<div class="ContainerFluid">
+<script lang="ts">
+	export let expand: boolean = false;
+</script>
+
+<div class="ContainerFluid" class:expand>
 	<slot />
 </div>
 
@@ -9,5 +13,9 @@
 		padding-left: var(--bs-gutter-x, 12px);
 		margin-right: auto;
 		margin-left: auto;
+	}
+	.expand {
+		padding-left: 40px;
+		padding-right: 40px;
 	}
 </style>
