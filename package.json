@@ -1,6 +1,6 @@
 {
   "name": "@codeunic/library-svelte",
-  "version": "0.20.0",
+  "version": "0.21.0",
   "scripts": {
     "dev": "svelte-kit dev --port 3003",
     "build": "svelte-kit build",
