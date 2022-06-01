@@ -13,7 +13,7 @@
 		flex-wrap: wrap;
 		// margin-top: calc(var(--bs-gutter-y) * -1);
 		margin-right: calc(var(--bs-gutter-x) * -0.5);
-		margin-left: calc(var(--bs-gutter-x) * -0.5);
+		margin-left: calc(var(--bs-gutter-x) * -0.5);	
 		> :global(*) {
 			flex-shrink: 0;
 			padding-right: calc(var(--bs-gutter-x) * 0.5);

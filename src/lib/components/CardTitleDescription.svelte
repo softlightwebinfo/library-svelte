@@ -20,6 +20,7 @@
 	.CardTitleDescription {
 		h6 {
 			font-size: 1.5em;
+			color: white;
 		}
 
 		> div {

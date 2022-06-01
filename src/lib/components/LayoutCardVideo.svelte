@@ -3,8 +3,6 @@
 	import CardBody from './CardBody.svelte';
 	import CardImage from './CardImage.svelte';
 	import CardTitleDescription from './CardTitleDescription.svelte';
-	import { fade, fly } from 'svelte/transition';
-	import { flip } from 'svelte/animate';
 
 	export let image: string;
 	export let title: string;

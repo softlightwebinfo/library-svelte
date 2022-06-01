@@ -107,5 +107,5 @@
 		>
 			<LayoutCardVideo {...item} isDefault />
 		</CarouselCustomSlider>
-	</ContainerFluid>
+	</ContainerFluid>	
 </BigCarousel>

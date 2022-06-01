@@ -1,0 +1,37 @@
+<script lang="ts">
+	export let date: boolean = false;
+	export let icon: boolean = false;
+</script>
+
+<div class="HeaderItems" class:date class:icon>
+	<slot />
+</div>
+
+<style lang="scss">
+	.HeaderItems {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 50px;
+		flex: 1;
+		border-right: 1px solid rgb(245, 245, 245);
+		position: relative;
+		color: #505357;
+		font-size: 1.37em;
+
+		&.date {
+			color: #5f6368;
+			min-width: 120px;
+			font-weight: 400;
+		}
+
+		&.icon {
+			font-size: 2em;
+		}
+
+		&:hover {
+			cursor: pointer;
+			background: #eee;
+		}
+	}
+</style>
