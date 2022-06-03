@@ -42,5 +42,8 @@
 				color: white !important;
 			}
 		}
+		:global(.VideoPremium) {
+			--bs-dark: white;
+		}
 	}
 </style>

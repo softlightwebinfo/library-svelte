@@ -8,6 +8,7 @@
 }
 
 @mixin avatarSize {
+
   @each $size,
   $value in $avatar-size {
     .#{$size} {
@@ -20,4 +21,83 @@
 // Usage
 .custom-container {
   @include make-container();
+}
+
+@mixin backgroundColor($hover: true, $dash: '--', $self: '') {
+  &#{$dash}primary #{$self} {
+    color: #fff;
+    background-color: var(--bs-primary);
+
+    @if ($hover) {
+      &:hover {
+        background-color: var(--bs-primary);
+      }
+    }
+  }
+
+  &#{$dash}secondary #{$self} {
+    color: #fff;
+    background-color: var(--bs-secondary);
+
+    @if ($hover) {
+      &:hover {
+        background-color: var(--bs-secondary-hover);
+      }
+    }
+  }
+
+  &#{$dash}dark #{$self} {
+    color: #fff;
+    background-color: var(--bs-black);
+
+    @if ($hover) {
+      &:hover {
+        background-color: #2f80ed;
+      }
+    }
+  }
+
+  &#{$dash}success #{$self} {
+    color: #fff;
+    background-color: var(--bs-success);
+
+    @if ($hover) {
+      &:hover {
+        background-color: var(--bs-success-hover);
+      }
+    }
+  }
+
+  &#{$dash}warning #{$self} {
+    color: #fff;
+    background-color: var(--bs-warning);
+
+    @if ($hover) {
+      &:hover {
+        background-color: var(--bs-warning-hover);
+      }
+    }
+  }
+
+  &#{$dash}danger #{$self} {
+    color: #fff;
+    background-color: var(--bs-danger);
+
+    @if ($hover) {
+      &:hover {
+        background-color: var(--bs-danger-hover);
+      }
+    }
+  }
+
+  &#{$dash}white #{$self} {
+    color: black;
+    background-color: white;
+
+    @if ($hover) {
+      &:hover {
+        background-color: #eceaea;
+      }
+    }
+  }
 }

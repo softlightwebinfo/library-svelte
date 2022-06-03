@@ -17,6 +17,7 @@
 	export let info: boolean = false;
 	export let light: boolean = false;
 	export let dark: boolean = false;
+	export let primaryDark: boolean = false;
 	export let shadow: boolean = false;
 	export let loading: boolean = false;
 	export let textLoading: string = 'Loading';
@@ -41,6 +42,7 @@
 	class:dark
 	class:rounded
 	class:shadow
+	class:primaryDark
 	class:loading
 	disabled={loading || disabled}
 >
@@ -141,9 +143,6 @@
 	.block {
 		width: 100%;
 	}
-	.rounded {
-		border-radius: 50px;
-	}
 	.secondary {
 		background-color: var(--bs-secondary);
 		color: var(--bs-white);
@@ -214,6 +213,15 @@
 		box-shadow: var(--bs-button-shadow);
 		border: 1px solid rgb(240, 248, 255);
 	}
+	.primaryDark {
+		background-color: var(--bs-dark-primary);
+		color: var(--bs-white);
+	}
+
+	.rounded {
+		border-radius: 50px;
+	}
+	
 	.disabled,
 	.loading {
 		background-color: gainsboro;
