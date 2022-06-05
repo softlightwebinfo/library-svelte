@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { createEventDispatcher } from 'svelte';
+
 	import { slide } from 'svelte/transition';
 	import Badge from './Badge.svelte';
 
@@ -11,7 +13,10 @@
 	const SLOTS = $$props.$$slots;
 	let open = false;
 
+	const dispatch = createEventDispatcher();
+
 	$: onClick = () => {
+		dispatch('click');
 		if (!SLOTS) return;
 		open = !open;
 	};
@@ -55,6 +60,10 @@
 		align-items: center;
 		display: flex;
 		width: 100%;
+		span,
+		i {
+			color: var(--dark-color);
+		}
 		:global(.Badge) {
 			margin-left: auto;
 		}
@@ -62,6 +71,15 @@
 			margin-left: auto;
 			display: flex;
 			justify-content: center;
+		}
+		&:hover {
+			span,
+			i,
+			& {
+				color: var(--bs-white) !important;
+			}
+			cursor: pointer;
+			background-color: var(--bs-dark-primary);
 		}
 	}
 	i {
@@ -71,7 +89,7 @@
 		font-size: 15px;
 		line-height: 1.40625rem;
 		vertical-align: middle;
-		color: #7f8387;
+		color: var(--dark-color);
 		-webkit-transition: all 0.4s;
 		transition: all 0.4s;
 		color: var(--dark-color);
@@ -89,16 +107,20 @@
 		&:hover {
 			i,
 			& {
-				color: #fff;
+				color: var(--dark);
 				cursor: pointer;
 			}
 		}
 	}
 	.active {
-		i,
-		a {
-			color: #fff;
+		> a i,
+		> a {
+			span,
+			& {
+				color: var(--bs-white) !important;
+			}
 			cursor: pointer;
+			background-color: var(--bs-dark-primary);
 		}
 	}
 </style>

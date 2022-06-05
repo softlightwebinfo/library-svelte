@@ -1,11 +1,13 @@
 <script lang="ts">
+	export let indexColumn: number = null;
+	export let keyColumn: string = null;
 	export let th: boolean = false;
 </script>
 
 {#if th}
-	<th><slot /></th>
+	<th data-key={keyColumn} data-index={indexColumn}><slot /></th>
 {:else}
-	<td><slot /></td>
+	<td data-index={indexColumn} data-key={keyColumn}><slot /></td>
 {/if}
 
 <style lang="scss">

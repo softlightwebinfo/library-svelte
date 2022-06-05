@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<ul class="Menu">
+<ul class="Menu {$$props.class ?? ''}">
 	<slot />
 </ul>
 

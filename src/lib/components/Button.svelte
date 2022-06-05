@@ -45,6 +45,7 @@
 	class:primaryDark
 	class:loading
 	disabled={loading || disabled}
+	class:isOnlyIcon={!$$slots.default && !!icon}
 >
 	{#if !loading}
 		{#if icon}
@@ -221,7 +222,7 @@
 	.rounded {
 		border-radius: 50px;
 	}
-	
+
 	.disabled,
 	.loading {
 		background-color: gainsboro;
@@ -231,6 +232,11 @@
 
 		&:hover {
 			cursor: no-drop;
+		}
+	}
+	.isOnlyIcon {
+		i {
+			margin: 0;
 		}
 	}
 </style>

@@ -1,4 +1,11 @@
-<aside class="Sidebar">
+<script lang="ts">
+	import type { TSize } from '$lib/interfaces/size';
+
+	export let borderRight: boolean = false;
+	export let size: TSize = 'md';
+</script>
+
+<aside class="Sidebar {$$props.class ?? ''} {size}" class:borderRight>
 	<slot />
 </aside>
 
@@ -17,5 +24,11 @@
 		@media (max-width: 500px) {
 			max-width: 100%;
 		}
+	}
+	.borderRight {
+		border-right: 1px solid gainsboro;
+	}
+	.xs {
+		max-width: 300px;
 	}
 </style>

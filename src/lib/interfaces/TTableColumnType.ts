@@ -1,0 +1,1 @@
+export type TTableColumnType = "string" | "age" | "number";

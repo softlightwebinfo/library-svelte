@@ -17,6 +17,7 @@
 		height: var(--navbar_height);
 		display: flex;
 		align-items: center;
+		gap: var(--Navbar_gap, 10px);
 	}
 	.padding {
 		padding-left: $p;

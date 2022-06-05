@@ -8,10 +8,10 @@
 	<tbody>
 		<slot />
 	</tbody>
-	{#if $$slots.tbody}
-		<tbody>
-			<slot name="tbody" />
-		</tbody>
+	{#if $$slots.tfoot}
+		<tfoot>
+			<slot name="tfoot" />
+		</tfoot>
 	{/if}
 </table>
 
