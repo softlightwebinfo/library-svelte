@@ -1,4 +1,9 @@
-<div class="Description {$$props.class ?? ''}">
+<script lang="ts">
+	export let black: boolean = false;
+	export let center: boolean = false;
+</script>
+
+<div class="Description {$$props.class ?? ''}" class:black class:center>
 	<slot />
 </div>
 
@@ -14,5 +19,12 @@
 			margin-top: 0;
 			margin-bottom: 1rem;
 		}
+	}
+	.black {
+		--bs-description: var(--bs-black);
+	}
+	.center {
+		justify-content: center;
+		text-align: center;
 	}
 </style>

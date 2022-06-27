@@ -9,6 +9,6 @@
 			experience. By continuing to use our site, you accept our use of cookies and revised.`;
 </script>
 
-<BannerImageContent {image}>
+<BannerImageContent {image} {title}>
 	<CardBox {description} {title} />
 </BannerImageContent>

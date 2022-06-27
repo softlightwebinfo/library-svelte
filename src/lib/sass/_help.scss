@@ -101,3 +101,11 @@
     @extend .flex-justify-center;
     @extend .flex-align-center;
 }
+
+.m-left {
+    margin-left: auto;
+}
+
+.m-right {
+    margin-right: auto;
+}

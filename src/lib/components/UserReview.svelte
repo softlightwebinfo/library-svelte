@@ -1,11 +1,16 @@
 <script lang="ts">
 	import AvatarUser from './AvatarUser.svelte';
-    export let title, subTitle,image;
+	import Card from './Card.svelte';
+	import CardBody from './CardBody.svelte';
+	import CardHeader from './CardHeader.svelte';
+	import Description from './Description.svelte';
+	export let title, subTitle, image, description;
 </script>
 
-<article class="UserReview">
-	<header>
+<Card class="UserReview">
+	<CardBody>
 		<AvatarUser {title} {subTitle} {image} />
-	</header>
-	<section />
-</article>
+		<Description class="mt-2">{description}</Description>
+		<slot />
+	</CardBody>
+</Card>

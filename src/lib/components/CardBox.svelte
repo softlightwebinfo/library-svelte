@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Button from './Button.svelte';
 
 	import ButtonToolbar from './ButtonToolbar.svelte';

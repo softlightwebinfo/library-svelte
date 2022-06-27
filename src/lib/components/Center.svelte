@@ -1,4 +1,4 @@
-<div class="Center">
+<div class="Center {$$props.class ?? ''}">
 	<slot />
 </div>
 
