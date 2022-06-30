@@ -9,7 +9,7 @@
 	export let data: ICarouselSlickData[] = [];
 </script>
 
-<div class="SliderPicker">
+<div class="SliderPicker {$$props.class ?? ''}" style={$$props.style}>
 	<CarouselSlick {data} {showIndicators}>
 		<TitleCategory {title} {textButton} slot="top" let:onClickLeft let:onClickRight>
 			<ArrowLeftRight slot="right" on:left={onClickLeft} on:right={onClickRight} />
