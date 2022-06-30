@@ -74,6 +74,10 @@
   --bs-dark-primary: #fb9678;
   --bs-dark-light: #191919;
   --padding: 20px;
+  --carousel-slick_py: 200px;
+  --carousel-slick-item_column: 4;
+  --carousel-slick-item_width: calc(100% / var(--carousel-slick-item_column));
+  --carousel-slick-item_height: 200px;
 }
 
 $container-max-widths: (sm: 540px,

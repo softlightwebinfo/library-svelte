@@ -3,17 +3,17 @@
 
 	export let title: string;
 	export let hiddenRight: boolean = false;
-	export let textButton: string = 'Ver todo';
+	export let textButton: string = 'Show All';
 </script>
 
 <div class="TitleCategory {$$props.class ?? ''}" style={$$props.style}>
 	<h4>{title}</h4>
-	{#if $$slots.right}
-		<div class="TitleCategory__right">
-			<slot name="right" />
-		</div>
-	{/if}
 	{#if !hiddenRight}
+		{#if $$slots.right}
+			<div class="TitleCategory__right">
+				<slot name="right" />
+			</div>
+		{/if}
 		<Button on:click>{textButton}</Button>
 	{/if}
 </div>

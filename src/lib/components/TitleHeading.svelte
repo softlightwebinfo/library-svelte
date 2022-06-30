@@ -1,4 +1,4 @@
-<h3 class={$$props.class ?? ''}>
+<h3 class="TitleHeading {$$props.class ?? ''}">
 	<slot />
 </h3>
 

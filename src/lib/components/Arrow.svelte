@@ -26,7 +26,7 @@
 		top: 0;
 		bottom: 0;
 		margin: auto;
-
+		z-index: 2;
 		&:hover {
 			opacity: 0.7;
 			cursor: pointer;
