@@ -1,18 +1,17 @@
 <script lang="ts">
 	import BackgroundImage from './BackgroundImage.svelte';
-
 	import BottomGradient from './BottomGradient.svelte';
-
 	import TitleHeading from './TitleHeading.svelte';
-
-	export let image: string;
-	export let title: string;
+	export let image: string = '';
+	export let title: string = '';
 </script>
 
 <article class="CarouselSlickItem" on:click>
-	<BackgroundImage {image} {title} />
-	<BottomGradient />
-	<TitleHeading>{title}</TitleHeading>
+	<slot>
+		<BackgroundImage {image} {title} />
+		<BottomGradient />
+		<TitleHeading>{title}</TitleHeading>
+	</slot>
 </article>
 
 <style lang="scss">
@@ -26,12 +25,12 @@
 		font-size: 0.8rem;
 		transition: all 0.8s ease-in-out;
 		&:hover {
-			background-color: black;
-			cursor: pointer;
-			:global(.BackgroundImage) {
-				background-color: black;
-				opacity: 0.5;
-			}
+			// background-color: black;
+			// cursor: pointer;
+			// :global(.BackgroundImage) {
+			// 	background-color: black;
+			// 	opacity: 0.5;
+			// }
 		}
 		:global(.TitleHeading) {
 			position: absolute;

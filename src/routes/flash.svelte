@@ -1,6 +1,6 @@
 <script>
-	import Flash from '$lib/components/flash.svelte';
-import Shadow from '$lib/components/Shadow.svelte';
+	import Flash from '$lib/components/Flash.svelte';
+	import Shadow from '$lib/components/Shadow.svelte';
 	const data = [
 		'A-HA theme is multi-purpose solution for any kind of business',
 		'8 Hidden Costs of Starting and Running a Business',

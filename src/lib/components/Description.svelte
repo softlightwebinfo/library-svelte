@@ -3,7 +3,7 @@
 	export let center: boolean = false;
 </script>
 
-<div class="Description {$$props.class ?? ''}" class:black class:center>
+<div class="Description {$$props.class ?? ''}" style={$$props.style} class:black class:center>
 	<slot />
 </div>
 

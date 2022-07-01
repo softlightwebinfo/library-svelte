@@ -7,14 +7,16 @@
 	import Indicators from './Indicators.svelte';
 	const dispatch = createEventDispatcher();
 
+	export let autoHeight: boolean = true;
 	export let data: ICarouselSlickData[] = [];
+	export let showHideItems: boolean = false;
 	export let showIndicators: boolean = true;
 	const { slider, onClickRight, onClickLeft, onClickIndicator, index, indicator } =
 		useCarousel(data);
 </script>
 
 <slot name="top" {onClickRight} {onClickLeft} item={null} index={null} itemIndex={0} />
-<div class="CarouselSlick">
+<div class="CarouselSlick" class:showHideItems class:autoHeight>
 	<Arrow left on:click={onClickLeft} />
 	{#if showIndicators}
 		<Indicators
@@ -49,6 +51,17 @@
 			position: relative;
 			display: flex;
 			scroll-behavior: smooth;
+		}
+	}
+	.showHideItems {
+		.CarouselSlick__slider {
+			padding-left: 80px;
+			padding-right: 80px;
+		}
+	}
+	.autoHeight {
+		:global(.CarouselSlickItem) {
+			height: 100%;
 		}
 	}
 </style>
