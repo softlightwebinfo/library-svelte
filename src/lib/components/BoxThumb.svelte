@@ -95,11 +95,11 @@
         flex-direction: column;
         text-align: left;
 		:global(.TitleHeading) {
-            margin: 0;
-			margin-bottom: 15px;
+            margin: 0!important;
+			margin-bottom: 15px!important;
 			font-size: 22px;
-            position: static;
-            padding: 0;
+			position: static!important;
+			padding: 0!important;
 		}
 	}
 </style>
