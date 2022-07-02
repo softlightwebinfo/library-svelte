@@ -6,7 +6,7 @@
 	export let title: string = '';
 </script>
 
-<article class="CarouselSlickItem" on:click>
+<article class="CarouselSlickItem {$$props.class ?? ''}" on:click>
 	<slot>
 		<BackgroundImage {image} {title} />
 		<BottomGradient />

@@ -1,8 +1,9 @@
 <script lang="ts">
 	export let right = false;
+	export let center = false;
 </script>
 
-<div class="ButtonToolbar {$$props.class ?? ''}" class:right style={$$props.style}>
+<div class:center class="ButtonToolbar {$$props.class ?? ''}" class:right style={$$props.style}>
 	<slot />
 </div>
 
@@ -14,5 +15,8 @@
 	}
 	.right {
 		margin-left: auto;
+	}
+	.center {
+		margin: auto;
 	}
 </style>

@@ -3,7 +3,7 @@
 	import CarouselSlickItem from '$lib/components/CarouselSlickItem.svelte';
 	import Container from '$lib/components/Container.svelte';
 
-	import BoxListing from './../lib/components/BoxListing.svelte';
+	import UserStat from './../lib/components/UserStat.svelte';
 	const image = 'https://photostame.com/images/video-home-poster.jpg';
 </script>
 
@@ -14,22 +14,20 @@
 			title: `Title - ${i}`,
 			image
 		}))}
-		autoHeight
 		showHideItems
+		autoHeight={false}
 	>
-		<CarouselSlickItem>
-			<BoxListing
-				price="149.90 €"
-				{image}
-				rate={3}
-				totalRate={100}
-				title="Codeunic"
-				subTitle={['07300, Palma de mallorca', '(+34) 662 223 768']}
-			/>
+		<CarouselSlickItem class="UserStatGlobal">
+			<UserStat {image} name="Codeunic" avatar={image} />
 		</CarouselSlickItem>
 	</CarouselSlick>
 </Container>
 
 <style lang="scss" global>
 	@import '../lib/style.scss';
+	.UserStatGlobal {
+		--carousel-slick-item_width: 150px;
+		--carousel-slick-item_height: 150px !important;
+		// height: var(--carousel-slick-item_height);
+	}
 </style>

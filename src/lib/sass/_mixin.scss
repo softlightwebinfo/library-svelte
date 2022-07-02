@@ -7,13 +7,17 @@
   margin-left: auto;
 }
 
-@mixin avatarSize {
+@mixin avatarSize($size: $avatar-size) {
 
   @each $size,
   $value in $avatar-size {
     .#{$size} {
-      height: $value;
-      width: $value;
+
+      img,
+      & {
+        height: $value;
+        width: $value;
+      }
     }
   }
 }
